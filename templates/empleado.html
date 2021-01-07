@@ -1,0 +1,24 @@
+{% extends "base_template.html" %}
+{% block title %}Iniciar Sesión{% endblock %}
+{% block content %}
+      <h1>Acceder</h1>
+                 
+      <form action = "{{ request.path }}" method = "post" class= "container row p-0">  
+         
+            <div class="form-group col-6">
+                  <label for="dni">DNI</label>
+                  <input type="text" class="form-control  col-12 " name="dni" placeholder="dni">                  
+            </div>
+
+            <div class="form-group col-6">
+               <label for="">Contraseña</label>
+               <input type="password" class="form-control col-12 " name="password" placeholder="Contraseña">
+            </div>
+            
+            <div class="row justify-content-end mt-3 col-12">
+            <button class="btn btn-primary rounded ">
+                Ingresar
+            </button>
+            </div>
+      </form>
+{% endblock %}

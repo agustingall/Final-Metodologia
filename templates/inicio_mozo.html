@@ -1,0 +1,80 @@
+{% extends "base_template.html" %}
+{% block title %}Nuevo Pedido{% endblock %}
+{% block content %}
+
+
+<h2 class="h2 text-center text-info">
+	Menú Mozo
+</h2>
+
+	<h3 class="h3 text-center mt-4">
+		Pedidos Sin Cobrar
+	</h3>
+	{%for pedido in pedidos%}
+		<p class="h4 pl-2 mt-5">Pedido N°{{pedido.NumPedido}}</p>
+		<table class="table">
+			<thead>
+				<tr>
+				<th>Fecha</th>
+				<th>Total</th>
+				<th>Observación</th>
+				<th>Dni Mozo</th>
+				<th>Mesa</th>				
+				<td></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+				<td>{{pedido.Fecha}}</td>
+				<td>{{pedido.Total}}</td>
+				
+				<td>{{pedido.Observacion}}</td>
+				<td>{{pedido.DNIMozo}}</td>
+				<td>{{pedido.Mesa}}</td>
+				{%if pedido.Cobrado == False%}
+				<td>
+				<form action="/pagado" method="POST">						
+						<input type="hidden" value={{pedido.NumPedido}} name="NumPedido">			
+						<input type="hidden" value="{{dni}}" name="dni">
+						<button type="submit" class="btn btn-outline-primary">
+							Pagado
+						</button>
+				</form>
+				{%endif%}
+				</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<table class="table table-sm mt-3 pl-2">
+				<thead class="bg-primary text-white">
+					<td>#</td>
+					<td>Producto</td>
+					<td>Precio</td>
+					<td>Estado</td>
+					<td></td>
+				</thead>
+				<tbody>
+				{%for item in pedido.items%}
+					<tr>
+					
+					<td>{{item.NumItem}}</td>
+					<td>{{item.Productos.nombre}}</td>
+					<td>{{item.Precio}}</td>
+					<td>{{item.Estado}}</td>
+				{%endfor%}		
+				</tbody>
+			</table>
+	
+
+	{%endfor%}
+	
+
+<form action = "/nuevo_pedido" method = "POST" class= "container row p-0">  
+	<button class="btn btn btn-danger rounded" >Crear Nuevo Pedido</button>
+	<input type="hidden" value="{{dni}}" name="dni">
+</form>
+
+
+
+{% endblock %}

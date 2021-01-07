@@ -1,0 +1,80 @@
+{% extends "base_template.html" %}
+{% block title %}Nuevo Pedido{% endblock %}
+{% block content %}
+
+
+	<h1 class="h1 text-center mt-5 mb-5 text-info">Pedido N° {{NumPedido}}</h1>
+	
+	<div class="row">
+		
+		<table class="table col-6">
+		  <thead>
+		    <tr>
+		      <th scope="col">Num Producto</th>
+		      <th scope="col">Nombre</th>
+		      <th scope="col">Precio Unitario</th>
+		      <th></th>
+		    </tr>
+		  </thead>
+		  <tbody>
+			{% for producto in productos %}
+				<tr>
+					<form action="{{request.path}}" method="POST">
+					<input type="hidden" value="{{dni}}" name="dni">
+					<td>{{producto.NumProducto}}</td>
+					<input type="hidden" value="{{producto.NumProducto}}" name="NumProducto">
+					<td>{{producto.nombre}}</td>
+					<td>{{producto.PrecioUnitario}}</td>	
+					<td>
+						<button class="btn btn-primary rounded" >Agregar</button>
+						</form>
+					</td>
+				</tr>
+			{% endfor %}
+		  </tbody>
+		</table>
+				    </form>
+
+
+		<div class="col-6">
+				<h2 class="h2 text-center text-danger">
+					Carta
+				</h2>
+				{% if items %}
+					<table class="table">
+						
+						<thead>
+							<th>Nombre</th>
+							<th>Precio</th>						
+						</thead>
+				{% for item in items%}
+						<tbody>
+							<td>
+								{{item.Productos.nombre}}
+							</td>
+							<td>
+								{{item.Precio}}
+							</td>
+				{%endfor%}
+						
+						
+						</tbody>
+					</table>
+				<h3 class="h3 text-left pl-2 text-success">total : ${{total}} </h3>
+
+				{%endif%}
+		</div>
+	</div>
+	<form action="/terminar_pedido" method = "POST" class= "container row p-0 mt-4">
+		<input type="hidden" value="{{NumPedido}}" name="nump">
+		<input type="hidden" value="{{total}}" name="total">
+		<input type="hidden" value="{{dni}}" name="dni">
+		<div class="row justify-content-end mt-3 col-12">
+            <button class="btn btn btn-success rounded ">
+                Terminar Pedido
+            </button>
+            </div>
+	</form>
+
+
+{% endblock %}

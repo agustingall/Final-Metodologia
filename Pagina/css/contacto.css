@@ -1,0 +1,92 @@
+*{
+	box-sizing: border-box;
+	list-style: none;
+	margin:0;
+	padding: 0;
+}
+
+.end{
+	justify-content: flex-end;
+}
+
+.center{
+	align-items: center;
+	justify-content: center;
+}
+
+.flex{
+	display: flex;
+}
+
+h2.titulo{
+	font-family: 'Ubuntu', sans-serif;
+	letter-spacing: 3.5px;
+}
+
+header{
+	padding: 1% 5%;
+	height: 20%
+	background-size: cover;
+	color: #fff;
+}
+
+
+nav{
+	padding: 3vh 0;
+	justify-content: space-between;
+}
+
+nav div p{
+	font-family: 'Libre Caslon Display', serif;
+	font-size: 1.2em;
+	letter-spacing: 3px;
+	padding-top: 5px;	
+	position: absolute;
+	text-align: center;
+}
+
+
+.container{
+	border-radius: 1.5em ;
+	border: 1px solid #CCA134;
+	background: #f7f2e7;
+	height: 80%;
+	opacity: .9;
+	padding-left: 5%;
+	padding-right: 5%; 
+}
+
+.p-l{
+	padding-left: 5%;
+}
+
+.titulo{
+	font-family: 'Oswald', sans-serif;
+}
+
+.lista li{
+	
+	color: #fff;
+	font-family: 'Varela', sans-serif;
+
+	font-size: .8em;
+	letter-spacing: 1px;
+	padding: 0 1vw;
+}
+
+.actual{
+	border-bottom: 2px solid #fff;
+}
+
+body{
+	background-image: url('../img/Fondo.jpg');
+	height: 100vh;
+}
+
+form.contacto{
+	width: 100%;
+}
+
+.h2{
+	color:#CCA134;
+}

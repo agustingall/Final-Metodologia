@@ -1,0 +1,108 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	min-height: 100vh;
+	background: #000;
+	font-family: 'Open Sans', sans-serif;
+	background: url('../img/fondoMenu.jpg') ;
+	background-size: cover;
+}
+
+.container{
+	margin: 0 10%;
+	background: #f7f2e7;
+}
+
+.container > div{
+	border-top:    1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.title{
+	padding: 1.7em;
+	text-align: center;
+
+}
+
+h1{
+	word-spacing:   .2em;
+	letter-spacing: .1em;
+}
+
+.horario{
+	padding: .6em;
+	text-align: center;
+}
+
+.horario .h2{
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic;
+}
+
+.item{
+	width: 100%;
+}
+
+.w-80{
+	width: 80%;
+}
+
+.w-80{
+	line-height: 1.1em;
+}
+
+.flex{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+section{
+	width: 50%;
+}
+
+.contenido, section .h2{
+	border: 1px solid #000;
+}
+
+.h2{
+	font-size: 1.2em;
+	font-weight: 600;
+	padding: .2em 0 .2em 1em;
+}
+
+.contenido{
+	padding: 1.1em 2em; 
+}
+
+.item{
+	margin-top: 1em;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.item:nth-child(1){
+	margin-top: 0;
+}
+
+.item .w-80 p:first-child, .item > p:last-child{
+	font-weight: 600;
+
+}
+
+@media (max-width: 768px) { 
+
+	section{
+		width: 100%;
+		
+	}
+
+	section .h2{
+		text-align: center;
+	}
+
+ }

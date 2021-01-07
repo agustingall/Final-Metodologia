@@ -1,0 +1,29 @@
+{% extends "base_template.html" %}
+{% block title %}Nuevo Pedido{% endblock %}
+{% block content %}
+
+
+<form action = "/completar_pedido" method = "POST" class= "container row p-0 mt-4">
+		
+		<div class="form-group col-12 row d-flex justify-content-center">
+			<label for="observaciones"><h3 class="h3">Observaciones</h3></label>
+		    <textarea class="form-control" id="observaciones" name="observacion" placeholder="Observaciones" rows="3"></textarea>
+          
+         </div>
+		
+		<div class="form-group col-12 row d-flex justify-content-center">	
+        <label for="" class="mt-2" >Numero de mesa: </label>
+        <input type="number" min="1" max="8" value="1" class="form-control ml-3 col-2" name="mesa"  >
+        <div class="row justify-content-end mt-3 col-12">
+            <button class="btn btn btn-success rounded ">
+                Terminar Pedido
+            </button>
+            </div>
+        <input type="hidden" value="{{nump}}"  name="nump">    
+        <input type="hidden" value="{{total}}" name="total">
+        <input type="hidden" value="{{dni}}" name="dni">
+    </div>
+	</form>
+
+
+{% endblock %}

@@ -1,0 +1,258 @@
+*{
+	box-sizing: border-box;
+	list-style: none;
+	margin:0;
+	padding: 0;
+}
+
+.end{
+	justify-content: flex-end;
+}
+
+.center{
+	align-items: center;
+	justify-content: center;
+}
+
+.flex{
+	display: flex;
+}
+
+h2.titulo{
+	font-family: 'Ubuntu', sans-serif;
+	letter-spacing: 3.5px;
+}
+
+header{
+	padding: 1% 5%;
+	background-image: url('img/Fondo.jpg');
+	background-size: cover;
+	color: #fff;
+	height: 100vh;
+}
+
+
+nav{
+	padding: 3vh 0;
+	justify-content: space-between;
+}
+
+nav div p{
+	font-family: 'Libre Caslon Display', serif;
+	font-size: 1.2em;
+	letter-spacing: 3px;
+	padding-top: 5px;	
+	position: absolute;
+	text-align: center;
+}
+
+
+.container{
+	padding-left: 5%;
+	padding-right: 5%; 
+}
+
+.p-l{
+	padding-left: 5%;
+}
+
+.titulo{
+	font-family: 'Oswald', sans-serif;
+}
+
+
+
+
+
+
+.inicio{
+	align-items: center;
+	height:  92vh;
+	justify-content: left;
+}
+
+
+
+.mensaje{
+	font-family: 'Merriweather', serif;
+	padding-bottom: 15vh;
+	font-size: 3.5em;
+	width: 46%;
+	word-spacing: 5px;
+	letter-spacing: 3px;
+}
+
+.mensaje a{
+	font-size: 1.5rem;
+	padding: 3%;
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+.logo{
+	position: absolute;
+	bottom: 5%;
+	left: 45%;
+	text-align: center;
+}
+
+.elegante{
+	color: #CCA134;
+	font-family: 'Petit Formal Script', cursive;
+	font-size: 2.5em;
+}
+
+.lista li{
+	
+	color: #fff;
+	font-family: 'Varela', sans-serif;
+
+	font-size: .8em;
+	letter-spacing: 1px;
+	padding: 0 1vw;
+}
+
+.actual{
+	border-bottom: 2px solid #fff;
+}
+
+
+section{
+	padding: 12vh 0;
+}
+
+article{
+	padding: 5vh 0;
+}
+
+article, .fotografia{
+	width: 50%;
+}
+
+article p:first-child{
+	font-size: 2.8em;
+}
+
+article p{
+	font-size: 2.5em;
+	text-align: center;
+}
+
+article .titulo{
+	font-size: 3.5em;
+	margin-top: -22px;
+	word-spacing: .15em;
+}
+
+.texto{
+
+	font-family: 'Lato', sans-serif;
+	font-size: 1.2em;
+	letter-spacing: .5px;
+	line-height: 28px;
+	padding-top : 28px;
+	text-align: justify;
+	word-spacing: 1.2px;
+}
+
+.fotografia{
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+img{
+	border: 1px solid #000;
+	height: 85%;
+	width: 90%;
+}
+
+section{
+	background-color: #f7f2e7;
+}
+
+article i{
+	padding: 8% 50% 2% 50%;
+	color  : #CCA134;
+}
+
+.descripcion{
+	text-align: center;
+	padding: 0;
+}
+
+.descripcion.d-1{
+	background-image: url('img/Fondo2.jpg');
+}
+
+.descripcion article{
+	padding: 12.5vh 5%;
+}
+
+.descripcion p{
+	padding-top: 5px;
+	color: #f7fbe1;
+	letter-spacing: 4px;
+	font-size: 2.8em;
+}
+
+
+.caja{
+	flex-wrap: nowrap;
+	width: 46%;
+	height: 46%;
+	margin:2%;
+	border: 2px solid #000;
+}
+
+.descripcion.d-2{
+	background-color: black;
+}
+
+.descripcion.d-2 .titulo{
+	color: #CCA134;;
+}
+
+.descripcion.d-2 .elegante{
+	color: #f4eeff;
+}
+
+.fotografia.f-2{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.f-2 img{
+	height: 85%;
+	width: 45%;
+}
+
+
+footer{
+	padding: 4% 5%;
+	background-color: #000;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+}
+
+footer p{
+	text-align: center;
+}
+
+.encabezado-tabla{
+	padding-bottom: 2vh;
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 3.5px;
+	font-size: 17px;
+}
+
+td{
+	padding-left: 4.5vw;
+	padding-top: .5vh;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 13px;
+}

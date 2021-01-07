@@ -1,0 +1,13 @@
+
+@media (max-width: 768px){
+	.flex.container{
+		flex-direction:  column;
+	}
+	.flex.container>article, .flex.container>.fotografia{
+		width: 100%;
+	}
+
+	.mensaje{
+		width: 85vw;
+	}
+}

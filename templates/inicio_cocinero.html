@@ -1,0 +1,59 @@
+{% extends "base_template.html" %}
+{% block title %}Nuevo Pedido{% endblock %}
+{% block content %}
+
+
+<h2 class="h2 text-center text-info">
+	Menú Cocinero
+</h2>
+
+	<h3 class="h3 text-center mt-4">
+		Pedidos Sin Cobrar
+	</h3>
+	{%for pedido in pedidos%}
+		<p class="h4 pl-2 mt-5">Pedido N°{{pedido.NumPedido}}</p>
+		<table class="table">
+			<thead>	
+				<th>Observación</th>				
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{pedido.Observacion}}</td>
+				</tr>
+			</tbody>
+		</table>
+			<table class="table table-sm mt-3 pl-2">
+				<thead class="bg-primary text-white">
+					<td>#</td>
+					<td>Producto</td>
+					<td>Precio</td>
+					<td>Estado</td>
+					<td></td>
+				</thead>
+				<tbody>
+				{%for item in pedido.items%}
+					<tr>
+					
+					<td>{{item.NumItem}}</td>
+					<td>{{item.Productos.nombre}}</td>
+					<td>{{item.Precio}}</td>
+					<td>{{item.Estado}}</td>
+						{% if item.Estado == 'Pendiente'%}
+					<td>
+						<form action="/listo" method="POST">	
+						
+						<input type="hidden" value={{item.NumItem}} name="NumItem">
+						<input type="hidden" value="{{dni}}" name="dni">
+						<button type="submit" class="btn btn-outline-primary">Listo</button>
+					</form>
+					</td>
+					{%endif%}
+					</tr>
+				{%endfor%}
+				</tbody>
+			</table>
+	{%endfor%}
+	
+
+
+{% endblock %}
